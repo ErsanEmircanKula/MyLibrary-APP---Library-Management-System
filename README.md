@@ -9,7 +9,8 @@
 **MyLibrary** is a modern, user-friendly desktop application for managing your personal book collection.
 With MyLibrary, you can easily add, edit, search, filter, and visualize your books.
 The app supports importing/exporting data, statistics, and even fetching book info by ISBN!
-![Logo](https://i.hizliresim.com/94nlcqf.png)
+
+![Logo](https://i.imgur.com/4EgGp0p.png)
     
 ## ✨ Features
 
@@ -30,5 +31,25 @@ The app supports importing/exporting data, statistics, and even fetching book in
   - The application uses the [OpenLibrary Books API](https://openlibrary.org/dev/docs/api/books) service to automatically retrieve book details such as title, author, publisher, page count, and cover image when you enter an ISBN number.
   - This feature requires an internet connection.
   - You can use the "Get Book Information" button after entering the ISBN to auto-fill the book details.
+
+---
+## 🛠️ Build as EXE (Optional)
+
+If you want to convert the application into a standalone Windows executable (.exe), you can use [PyInstaller](https://pyinstaller.org/):
+
+1. **Install PyInstaller**
+   ```bash
+   pip install pyinstaller
+   ```
+2. **Run the following command in your project directory:**
+   ```bash
+   pyinstaller --noconfirm --onefile --windowed --icon=ikon.ico MyLibrary.py
+   ```
+   - If you don't have an icon, you can remove the `--icon=ikon.ico` part.
+3. **Find your .exe file in the `dist` folder:**
+   - Example: `dist/MyLibrary.exe`
+4. **Copy your database file (`mylibrary.db`) and any other required files to the same folder as the .exe if needed.**
+
+> Now you can run your application on any Windows computer without needing Python installed!
 
 ---
